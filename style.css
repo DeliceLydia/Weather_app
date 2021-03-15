@@ -1,5 +1,5 @@
 body {
-  background: url(./assets/sun.webp);
+  background: url(../src/assets/sun.webp);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
