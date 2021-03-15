@@ -1,23 +1,17 @@
 body {
-  background: url(./assets/img.jpeg);
+  background: url(./assets/sun.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   color: #fff;
+  display: block;
   font-family: 'Inter', 'sans-serif';
 }
 
 .header-container {
-  padding-top: 150px;
-}
-
-h2 {
-  text-align: center;
-  padding-bottom: 20px;
-  font-size: 3rem;
-  text-transform: capitalize;
+  padding-top: 100px;
 }
 
 .search-form {
@@ -34,14 +28,36 @@ h2 {
   margin-right: 2px;
 }
 
+input:focus {
+  outline: none;
+  border: none;
+}
+
 .radius {
   border-radius: 5px;
 }
 
 .search-icon {
   width: 20%;
+  outline: none;
 }
 
 .fa-search {
   font-size: 16px;
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.932);
+  text-align: center;
+  color: #000;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 60px 16px;
+  max-width: 376px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.weather-temp {
+  margin-top: -2%;
 }
