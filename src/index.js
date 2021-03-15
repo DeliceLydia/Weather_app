@@ -39,5 +39,26 @@ const weatherInfo = ({
 
 const getWeatherInfo = async () => {
   const activeWeatherUnit = JSON.parse(localStorage.getItem(UNIT_KEY));
-  
-}
+  const { value } = searchInput;
+  errors.textContent = '';
+  if (!value.length) return;
+  try {
+    const data = await fetch(
+      `${weatherApi}?q=${value}&units=${activeWeatherUnit}&appid=${apiKey}`,
+    );
+    const response = data.json();
+    if (response.status === 200) {
+      const { name, weather, main } = response;
+      weatherInfo({
+        name,
+        weather,
+        main,
+        activeWeatherUnit,
+      });
+    } else {
+      throw new Error('That city do not exist!');
+    }
+  } catch (error) {
+    errors.textContent = error.message;
+  }
+};
