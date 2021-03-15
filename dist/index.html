@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
       src="https://kit.fontawesome.com/a538d6fa29.js"
       crossorigin="anonymous"
     ></script>
     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css">
-  <title>Weather App</title>
-</head>
-<body>
-  <main id="container" class="container">
-    <header class="header-container">
-      <div class="search-form">
-        <input type="text" id="search-input" class="search-input radius" placeholder="Search your City weather">
-        <button type="submit" class="radius search-icon">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-    </header>
-    <div id="errors-list"></div>
-    <div class="weather-container">
-      <div>
-        <h2 id="default-city" class="default-city">Venise</h2>
-        <h2 class="weather-temp" id="weather-temp">
-          <span>8</span>
-          <span>&#176;</span> 
-          <span>C</span>
-        </h2>
-      </div>
-      <div class="weather-info center">
-        <h3 class="weather-type" id="weather-type">Sunny</h3>
-        <div class="whether">
-          <span id="weather-min-temp">25 &#176;C min</span>
-          <span>/</span>
-          <span id="weather-max-temp">32 &#176;C max</span>
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main id="container" class="container">
+      <header class="header-container">
+        <div class="search-form">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input radius"
+            placeholder="Search your City weather"
+            spellcheck="false"
+          />
+          <button type="submit" class="radius search-icon">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </header>
+      <div id="errors-list"></div>
+      <div class="weather-container">
+        <div>
+          <h2 id="default-city" class="default-city">Venise</h2>
+          <h2 class="weather-temp" id="weather-temp">
+            <span>8</span>
+            <span>&#176;</span>
+            <span>C</span>
+          </h2>
+        </div>
+        <div class="weather-info center">
+          <h3 class="weather-type" id="weather-type">Sunny</h3>
+          <div class="whether">
+            <span id="weather-min-temp">25 &#176;C min</span>
+            <span>/</span>
+            <span id="weather-max-temp">32 &#176;C max</span>
+          </div>
+        </div>
+        <div class="weather-controls center">
+          <span>Celsius</span>
+          <input type="checkbox" id="toggler" class="toggle" />
+          <span>Fahrenheit</span>
         </div>
       </div>
-      <div class="weather-controls center">
-        <span>Celsius</span>
-        <input type="checkbox" id="toggler" class="toggle" />
-        <span>Fahrenheit</span>
-      </div>
-    </div>
-  </main>
-  <script src="./main.js"></script>
-</body>
+    </main>
+    <script src="./main.js"></script>
+  </body>
 </html>
