@@ -16,9 +16,8 @@
   <title>Weather App</title>
 </head>
 <body>
-  <div id="container" class="container">
+  <main id="container" class="container">
     <header class="header-container">
-      <h2>Welcome to the weather app</h2>
       <div class="search-form">
         <input type="text" class="search-input radius" placeholder="Search your City weather">
         <button type="submit" class="radius search-icon">
@@ -26,7 +25,31 @@
         </button>
       </div>
     </header>
-  </div>
+    <div class="errors-list"></div>
+    <div class="weather-container">
+      <div>
+        <h2 class="default-city">Venise</h2>
+        <h2 class="weather-temp" id="weather-temp">
+          <span>8</span>
+          <span>&#176;</span> 
+          <span>C</span>
+        </h2>
+      </div>
+      <div class="weather-info center">
+        <h3 class="weather-type" id="weather-type">Sunny</h3>
+        <div class="whether">
+          <span id="weather-min-temp">25 &#176;C min</span>
+          <span>/</span>
+          <span id="weather-max-temp">32 &#176;C max</span>
+        </div>
+      </div>
+      <div class="weather-controls center">
+        <span>Celsius</span>
+        <input type="checkbox" id="unit-toggler" class="toggle" />
+        <span>Fahrenheit</span>
+      </div>
+    </div>
+  </main>
   <script src="./main.js"></script>
 </body>
 </html>
