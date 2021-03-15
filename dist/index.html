@@ -19,16 +19,16 @@
   <main id="container" class="container">
     <header class="header-container">
       <div class="search-form">
-        <input type="text" class="search-input radius" placeholder="Search your City weather">
+        <input type="text" id="search-input" class="search-input radius" placeholder="Search your City weather">
         <button type="submit" class="radius search-icon">
           <i class="fas fa-search"></i>
         </button>
       </div>
     </header>
-    <div class="errors-list"></div>
+    <div id="errors-list"></div>
     <div class="weather-container">
       <div>
-        <h2 class="default-city">Venise</h2>
+        <h2 id="default-city" class="default-city">Venise</h2>
         <h2 class="weather-temp" id="weather-temp">
           <span>8</span>
           <span>&#176;</span> 
@@ -45,7 +45,7 @@
       </div>
       <div class="weather-controls center">
         <span>Celsius</span>
-        <input type="checkbox" id="unit-toggler" class="toggle" />
+        <input type="checkbox" id="toggler" class="toggle" />
         <span>Fahrenheit</span>
       </div>
     </div>
