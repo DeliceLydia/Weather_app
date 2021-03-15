@@ -1,0 +1,47 @@
+body {
+  background: url(./assets/img.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Inter', 'sans-serif';
+}
+
+.header-container {
+  padding-top: 150px;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.search-form {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  text-align: start;
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+.radius {
+  border-radius: 5px;
+}
+
+.search-icon {
+  width: 20%;
+}
+
+.fa-search {
+  font-size: 16px;
+}
