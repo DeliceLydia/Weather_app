@@ -1,6 +1,6 @@
 # Weather_app
 
-This project is about creating a weather forecast site using OpenWeatherMap API and it let you get a weather of any city in the world.
+This project is about creating a weather forecast site using OpenWeatherMap API and it let you get the weather of any city in the world.
 
 # Sunny Day
 ![screenshot](./sun.png)
