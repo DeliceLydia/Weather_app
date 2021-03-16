@@ -17,38 +17,18 @@
   </head>
   <body>
     <main id="container" class="container">
-      <header class="header-container">
-        <div class="search-form">
+        <form class="search-form">
           <input
             type="text"
-            id="search-input"
+            id="city"
             class="search-input radius"
             placeholder="Search your City weather"
             spellcheck="false"
           />
           <button type="submit" class="radius search-icon">
-            <i class="fas fa-search"></i>
+            get weather
           </button>
-        </div>
-      </header>
-      <div id="errors-list"></div>
-      <!-- <div class="weather-container"> -->
-        <!-- <div>
-          <h2 id="default-city" class="default-city">Venise</h2>
-          <h2 class="weather-temp" id="weather-temp">
-            <span>8</span>
-            <span>&#176;</span>
-            <span>C</span>
-          </h2>
-        </div>
-        <div class="weather-info center">
-          <h3 class="weather-type" id="weather-type">Sunny</h3>
-          <div class="whether">
-            <span id="weather-min-temp">25 &#176;C min</span>
-            <span>/</span>
-            <span id="weather-max-temp">32 &#176;C max</span>
-          </div>
-        </div> -->
+        </form>
         <div id="content" class="weather-controls center"></div>
       <!-- </div> -->
     </main>
