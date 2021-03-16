@@ -1,0 +1,91 @@
+body {
+  background: url(./assets/flow.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: block;
+  font-family: 'Inter', 'sans-serif';
+  font-size: 16px;
+}
+
+.day {
+  background: url(./assets/rain2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.night {
+  background: url(./assets/beauty.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.main-container {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.weather-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 800;
+  color: #fff;
+}
+
+.search-form {
+  display: flex;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  color: #000;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+.search-button {
+  width: 30%;
+  color: #555;
+  margin-left: 2px;
+}
+
+.radius {
+  border-radius: 5px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.card {
+  width: 18rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  color: #212529;
+  margin: 50px auto;
+  padding-top: 15px;
+}
+
+.button-toggle {
+  background: #228B22;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  margin: 0;
+  font-size: 17px;
+}
