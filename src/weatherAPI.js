@@ -7,6 +7,7 @@ const fetchWeatherData = async (location, apiKey) => {
 
 export default async (location, apiKey) => {
   const data = await fetchWeatherData(location, apiKey);
+
   return {
     temp: Math.round(data.main.temp - 273.15),
     city: data.name,

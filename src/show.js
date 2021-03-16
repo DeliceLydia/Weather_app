@@ -1,20 +1,21 @@
 const celcToFarnh = (unit) => Math.round(1.8 * unit + 32);
 const farnhToCelc = (unit) => Math.round(unit - 32) / 1.8;
 
+
 const addUnitToggler = (content) => {
   const togglerUnit = document.createElement('button');
   togglerUnit.classList.add('button-toggle');
-  togglerUnit.textContent = 'C to F';
+  togglerUnit.textContent = 'Celcius to Farnheit';
   togglerUnit.addEventListener('click', () => {
     const temp = document.querySelector('#temp');
     const number = Number(temp.textContent.slice(0, -2));
     const unit = temp.textContent.slice(-1);
     if (unit === 'C') {
       temp.textContent = `${celcToFarnh(number)}°F`;
-      togglerUnit.textContent = 'F to C';
+      togglerUnit.textContent = 'Celcius to Farnheit';
     } else {
       temp.textContent = `${farnhToCelc(number)}°C`;
-      togglerUnit.textContent = 'C to F';
+      togglerUnit.textContent = 'Celcius to Farnheit';
     }
   });
   content.append(togglerUnit);
@@ -34,10 +35,10 @@ const setBackground = (icon) => {
 
 // eslint-disable-next-line import/prefer-default-export
 export const displayWeather = (data, content) => {
-  content.classList = 'card small-card mx-auto';
+  content.classList = 'card';
   content.innerHTML = `
     <div class='card-header'>
-      <img src='https://openweathermap.org/img/wn/${data.weather.icon}@2x.png' width='40'>
+      <img src='https://openweathermap.org/img/wn/${data.weather.icon}@2x.png' width='50'>
       <span class='card-text' id='weatherInfo'>${data.weather.description}</span>
     </div>
     <div class='card-body'>
