@@ -1,5 +1,5 @@
 const celcToFarnh = (unit) => Math.round(1.8 * unit + 32);
-const farnhToCelc = (unit) => Math.round(unit - 32) / 1.8;
+const farnhToCelc = (unit) => Math.round((unit - 32) / 1.8);
 
 const addUnitToggler = (content) => {
   const togglerUnit = document.createElement('button');
