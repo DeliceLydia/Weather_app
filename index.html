@@ -16,22 +16,22 @@
     <title>Weather App</title>
   </head>
   <body>
-    <main id="container" class="container">
+    <main class="main-container">
+    <h2 class="weather-title">Get your city weather</h2>
         <form class="search-form">
           <input
             type="text"
             id="city"
             class="search-input radius"
-            placeholder="Search your City weather"
+            placeholder="Add your City"
             spellcheck="false"
           />
-          <button type="submit" class="radius search-icon">
-            get weather
+          <button type="submit" class="radius search-button">
+            Submit
           </button>
         </form>
         <div id="content" class="weather-controls center"></div>
-      <!-- </div> -->
-    </main>
+      </main>
     <script src="./main.js"></script>
   </body>
 </html>
