@@ -5,7 +5,7 @@ const apiKey = 'c09ea79421d4e76504e8e4d16e3e315b';
 const content = document.getElementById('content');
 const form = document.forms[0];
 
-form.addEventListener('submit', async e => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const city = document.getElementById('city').value;
   try {

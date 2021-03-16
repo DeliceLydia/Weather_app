@@ -11,9 +11,23 @@ body {
   font-size: 16px;
 }
 
+.day {
+  background: url(../src/assets/rain2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.night {
+  background: url(../src/assets/beauty.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
 .main-container {
   text-align: center;
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 .weather-title {

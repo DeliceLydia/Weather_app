@@ -12,6 +12,9 @@ export default async (location, apiKey) => {
     temp: Math.round(data.main.temp - 273.15),
     city: data.name,
     country: data.sys.country,
-    weather: { icon: data.weather[0].icon, description: data.weather[0].description },
+    weather: {
+      icon: data.weather[0].icon,
+      description: data.weather[0].description,
+    },
   };
 };
