@@ -8,6 +8,11 @@ This project is about creating a weather forecast site using OpenWeatherMap API 
 # Rainy Day
 ![screenshot](./rainy.png)
 
+
+## Live Demo
+
+Click [here](https://delicelydia.github.io/Weather_app/)
+
 ## Features
 
 A user is able to:
