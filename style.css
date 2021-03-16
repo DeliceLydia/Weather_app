@@ -1,5 +1,5 @@
 body {
-  background: url(../src/assets/sun.webp);
+  background: linear-gradient(to right, #75cce2, #eaecc6);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -60,4 +60,8 @@ input:focus {
 
 .weather-temp {
   margin-top: -2%;
+}
+
+.day {
+  background: linear-gradient(to right, #75cce2, #eaecc6);
 }

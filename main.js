@@ -13,9 +13,32 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\n//# sourceURL=webpack://weather_app/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weatherAPI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weatherAPI */ \"./src/weatherAPI.js\");\n/* harmony import */ var _show__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./show */ \"./src/show.js\");\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n\nvar apiKey = 'c09ea79421d4e76504e8e4d16e3e315b';\nvar content = document.getElementById('content');\nvar form = document.forms[0];\nform.addEventListener('submit', /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {\n    var city, data;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            e.preventDefault();\n            city = document.getElementById('city').value;\n            _context.prev = 2;\n            _context.next = 5;\n            return (0,_weatherAPI__WEBPACK_IMPORTED_MODULE_0__.default)(city, apiKey);\n\n          case 5:\n            data = _context.sent;\n            (0,_show__WEBPACK_IMPORTED_MODULE_1__.displayWeather)(data, content);\n            form.reset();\n            _context.next = 13;\n            break;\n\n          case 10:\n            _context.prev = 10;\n            _context.t0 = _context[\"catch\"](2);\n            (0,_show__WEBPACK_IMPORTED_MODULE_1__.displayError)(content);\n\n          case 13:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, null, [[2, 10]]);\n  }));\n\n  return function (_x) {\n    return _ref.apply(this, arguments);\n  };\n}());\n\n//# sourceURL=webpack://weather_app/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/show.js":
+/*!*********************!*\
+  !*** ./src/show.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayWeather\": () => (/* binding */ displayWeather),\n/* harmony export */   \"displayError\": () => (/* binding */ displayError)\n/* harmony export */ });\nvar celcToFarnh = function celcToFarnh(unit) {\n  return Math.round(1.8 * unit + 32);\n};\n\nvar farnhToCelc = function farnhToCelc(unit) {\n  return Math.round(unit - 32) / 1.8;\n};\n\nvar addUnitToggler = function addUnitToggler(content) {\n  var togglerUnit = document.createElement('button');\n  togglerUnit.classList.add('button-toggle');\n  togglerUnit.textContent = 'C to F';\n  togglerUnit.addEventListener('click', function () {\n    var temp = document.querySelector('#temp');\n    var number = Number(temp.textContent.slice(0, -2));\n    var unit = temp.textContent.slice(-1);\n\n    if (unit === 'C') {\n      temp.textContent = \"\".concat(celcToFarnh(number), \"\\xB0F\");\n      togglerUnit.textContent = 'F to C';\n    } else {\n      temp.textContent = \"\".concat(farnhToCelc(number), \"\\xB0C\");\n      togglerUnit.textContent = 'C to F';\n    }\n  });\n  content.append(togglerUnit);\n};\n\nvar setBackground = function setBackground(icon) {\n  var body = document.querySelector('body');\n\n  if (icon.slice(-1) === 'd') {\n    body.classList.add('day');\n    body.classList.remove('night');\n  } else {\n    body.classList.add('night');\n    body.classList.remove('day');\n  }\n}; // eslint-disable-next-line import/prefer-default-export\n\n\nvar displayWeather = function displayWeather(data, content) {\n  content.classList = 'card small-card mx-auto';\n  content.innerHTML = \"\\n    <div class='card-header'>\\n      <img src='https://openweathermap.org/img/wn/\".concat(data.weather.icon, \"@2x.png' width='40'>\\n      <span class='card-text' id='weatherInfo'>\").concat(data.weather.description, \"</span>\\n    </div>\\n    <div class='card-body'>\\n      <h5 class='card-title' id='location'>\").concat(data.city, \", \").concat(data.country, \"</h5>\\n      <p class='card-text'>Temperature: <span id='temp'>\").concat(data.temp, \"\\xB0C</span></p>\\n    </div>\\n    \");\n  setBackground(data.weather.icon);\n  addUnitToggler(content);\n};\nvar displayError = function displayError(content) {\n  content.innerHTML = '<p>Please input a valid city.</p>';\n};\n\n//# sourceURL=webpack://weather_app/./src/show.js?");
+
+/***/ }),
+
+/***/ "./src/weatherAPI.js":
+/*!***************************!*\
+  !*** ./src/weatherAPI.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nvar fetchWeatherData = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(location, apiKey) {\n    var api, data, weatherData;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            api = \"https://api.openweathermap.org/data/2.5/weather?q=\".concat(location, \"&APPID=\").concat(apiKey);\n            _context.next = 3;\n            return fetch(api);\n\n          case 3:\n            data = _context.sent;\n            _context.next = 6;\n            return data.json();\n\n          case 6:\n            weatherData = _context.sent;\n            return _context.abrupt(\"return\", weatherData);\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function fetchWeatherData(_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/(function () {\n  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(location, apiKey) {\n    var data;\n    return regeneratorRuntime.wrap(function _callee2$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            _context2.next = 2;\n            return fetchWeatherData(location, apiKey);\n\n          case 2:\n            data = _context2.sent;\n            return _context2.abrupt(\"return\", {\n              temp: Math.round(data.main.temp - 273.15),\n              city: data.name,\n              country: data.sys.country,\n              weather: {\n                icon: data.weather[0].icon,\n                description: data.weather[0].description\n              }\n            });\n\n          case 4:\n          case \"end\":\n            return _context2.stop();\n        }\n      }\n    }, _callee2);\n  }));\n\n  return function (_x3, _x4) {\n    return _ref2.apply(this, arguments);\n  };\n})());\n\n//# sourceURL=webpack://weather_app/./src/weatherAPI.js?");
 
 /***/ }),
 
@@ -3456,6 +3479,18 @@ eval("__webpack_require__(/*! ./modules/es6.symbol */ \"./node_modules/core-js/m
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -3466,6 +3501,22 @@ eval("__webpack_require__(/*! ./modules/es6.symbol */ \"./node_modules/core-js/m
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /************************************************************************/
