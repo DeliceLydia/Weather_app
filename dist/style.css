@@ -1,5 +1,5 @@
 body {
-  background: url(../src/assets/flow.webp);
+  background: url(./assets/flow.webp);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -12,14 +12,14 @@ body {
 }
 
 .day {
-  background: url(../src/assets/rain2.jpg);
+  background: url(./assets/rain2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
 }
 
 .night {
-  background: url(../src/assets/beauty.jpg);
+  background: url(./assets/beauty.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
