@@ -11,7 +11,7 @@ This project is about creating a weather forecast site using OpenWeatherMap API 
 
 ## Live Demo
 
-Click [here](https://delicelydia.github.io/Weather_app/)
+Click [here](https://lydiaweather-application.netlify.app/)
 
 ## Features
 
